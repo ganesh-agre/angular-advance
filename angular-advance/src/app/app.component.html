@@ -1,13 +1,50 @@
-<div>
-  <auth-form (submitted)="createUser($event)">
-    <h3>Create account</h3>
-    <button type="submit">join Us</button>
-  </auth-form>
-  <auth-form (submitted)="loginUser($event)">
-    <h3>Login</h3>
-    <button type="submit">Login</button>
-    <auth-remember (checked)="rememberUser($event)"></auth-remember>
-    <auth-remember (checked)="rememberUser($event)"></auth-remember>
-    <auth-remember (checked)="rememberUser($event)"></auth-remember>
-  </auth-form>
+<div class="app">
+  <nav>
+    <ul>
+      <li>
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Auth Form</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/credit-card"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Credit card</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/structural-directive"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Structural Directive
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="/file-size"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Pipe
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <router-outlet></router-outlet>
+  <!--<button (click)="destroyDynamicComponent()">Destroy</button>
+  <ng-container
+    [ngTemplateOutlet]="contentTemplate"
+    [ngTemplateOutletContext]="{ title: ' Login', btnName: 'register' }"
+  ></ng-container>-->
+  <div #container></div>
+  <ng-template #contentTemplate let-title="title" let-btnName="btnName">
+    <h4>{{ title }}</h4>
+    <button type="submit">{{ btnName }}</button>
+  </ng-template>
 </div>
