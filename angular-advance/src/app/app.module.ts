@@ -4,6 +4,8 @@ import { provideHttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthFormModule } from './auth-form/auth-form.module';
 import { MailModule } from './mail/mail.module';
+import { AuthModule } from './auth/auth.module';
+
 import { AppComponent } from './app.component';
 import { MyForComponent } from './strucrural-directive/my-for.comonent';
 import { FileSizeComponent } from './pipe/file-size.comonent';
@@ -28,6 +30,7 @@ import { FileSizePipe } from './pipe/file-size.pipe';
     CreditCardModule,
     StockInventoryModule,
     MailModule,
+    AuthModule,
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent],
