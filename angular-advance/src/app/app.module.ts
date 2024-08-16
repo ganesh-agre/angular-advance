@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { provideHttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthFormModule } from './auth-form/auth-form.module';
-
+import { MailModule } from './mail/mail.module';
 import { AppComponent } from './app.component';
 import { MyForComponent } from './strucrural-directive/my-for.comonent';
 import { FileSizeComponent } from './pipe/file-size.comonent';
@@ -27,6 +27,7 @@ import { FileSizePipe } from './pipe/file-size.pipe';
     AuthFormModule,
     CreditCardModule,
     StockInventoryModule,
+    MailModule,
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent],
